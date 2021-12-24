@@ -22,19 +22,20 @@ def load_image(name, colorkey=None):
 
 FPS = 50
 
+
 def terminate():
     pygame.quit()
     sys.exit()
 
-def start_screen():
 
+def start_screen():
     intro_text = ["Главная страница",
                   "Настройки",
                   "Продолжить"]
-    size=WIDTH, HEIGHT= 700, 400
-    screen=pygame.display.set_mode(size)
-    clock=pygame.time.Clock()
-    fon = pygame.transform.scale(load_image('download.png'), (WIDTH, HEIGHT))
+    size = WIDTH, HEIGHT = 700, 400
+    screen = pygame.display.set_mode(size)
+    clock = pygame.time.Clock()
+    fon = pygame.transform.scale(load_image('fon.jpg'), (WIDTH, HEIGHT))
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
     text_coord = 100
