@@ -60,4 +60,5 @@ def start_screen():
 
 
 pygame.init()
+print("Привет!")
 start_screen()
