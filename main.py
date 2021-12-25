@@ -52,13 +52,24 @@ def start_screen():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
-            elif event.type == pygame.KEYDOWN or \
-                    event.type == pygame.MOUSEBUTTONDOWN:
-                return  # начинаем игру
+            elif (event.type == pygame.KEYDOWN or
+                  event.type == pygame.MOUSEBUTTONDOWN) and \
+                    210 > event.pos[0] > 100 and 185 > event.pos[1] > 165:
+                print(2)
+                return  # натройки
+            elif (event.type == pygame.KEYDOWN or
+                  event.type == pygame.MOUSEBUTTONDOWN) and \
+                    215 > event.pos[0] > 90 and 215 > event.pos[1] > 195:
+                print(event.pos)
+                return  # продолжить
+            elif (event.type == pygame.KEYDOWN or
+                  event.type == pygame.MOUSEBUTTONDOWN) and \
+                    410 > event.pos[0] > 390 and 205 > event.pos[1] > 175:
+                print(event.pos)
+                return  # лампа
         pygame.display.flip()
         clock.tick(FPS)
 
 
 pygame.init()
-print("Привет!")
 start_screen()
