@@ -38,13 +38,14 @@ def start_screen():
     fon = pygame.transform.scale(load_image('fon.jpg'), (WIDTH, HEIGHT))
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
-    text_coord = 100
-    for line in intro_text:
-        string_rendered = font.render(line, 1, pygame.Color('white'))
+    text_coord = 125
+    intro_rect_x = [65, 100, 90]
+    for line in range(len(intro_text)):
+        string_rendered = font.render(intro_text[line], 1, pygame.Color('white'))
         intro_rect = string_rendered.get_rect()
         text_coord += 10
         intro_rect.top = text_coord
-        intro_rect.x = 10
+        intro_rect.x = intro_rect_x[line]
         text_coord += intro_rect.height
         screen.blit(string_rendered, intro_rect)
 
@@ -67,6 +68,7 @@ def start_screen():
                     410 > event.pos[0] > 390 and 205 > event.pos[1] > 175:
                 print(event.pos)
                 return  # лампа
+
         pygame.display.flip()
         clock.tick(FPS)
 
