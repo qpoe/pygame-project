@@ -37,6 +37,23 @@ def load_sound(name):
     return sound
 
 
+def load_music(name):
+    fullname = os.path.join('data', name)
+    try:
+        music = pygame.mixer.music.load(fullname)
+
+    except pygame.error as message:
+        print('Cannot load sound:', name)
+        raise SystemExit(message)
+
+    # если файл не существует, то выходим
+    if not os.path.isfile(fullname):
+        print(f"Файл со звуком '{fullname}' не найден")
+        sys.exit()
+    music = pygame.mixer.music.load(fullname)
+    return music
+
+
 FPS = 50
 
 
@@ -68,6 +85,7 @@ def start_screen():
 
     while True:
         mouse_click = load_sound("mouse_click.mp3")
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
@@ -87,4 +105,6 @@ def start_screen():
 
 
 pygame.init()
+pygame.mixer.music.load("data/sonata.mp3")
+pygame.mixer.music.play(loops=-1, start=6.5)
 start_screen()
