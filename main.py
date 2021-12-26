@@ -20,6 +20,23 @@ def load_image(name, colorkey=None):
     return image
 
 
+def load_sound(name):
+    fullname = os.path.join('data', name)
+    try:
+        sound = pygame.mixer.Sound(fullname)
+
+    except pygame.error as message:
+        print('Cannot load sound:', name)
+        raise SystemExit(message)
+
+    # если файл не существует, то выходим
+    if not os.path.isfile(fullname):
+        print(f"Файл со звуком '{fullname}' не найден")
+        sys.exit()
+    sound = pygame.mixer.Sound(fullname)
+    return sound
+
+
 FPS = 50
 
 
@@ -50,25 +67,21 @@ def start_screen():
         screen.blit(string_rendered, intro_rect)
 
     while True:
+        mouse_click = load_sound("mouse_click.mp3")
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
-            elif (event.type == pygame.KEYDOWN or
-                  event.type == pygame.MOUSEBUTTONDOWN) and \
+            elif event.type == pygame.MOUSEBUTTONDOWN and \
                     210 > event.pos[0] > 100 and 185 > event.pos[1] > 165:
-                print(2)
                 return  # натройки
-            elif (event.type == pygame.KEYDOWN or
-                  event.type == pygame.MOUSEBUTTONDOWN) and \
+            elif event.type == pygame.MOUSEBUTTONDOWN and \
                     215 > event.pos[0] > 90 and 215 > event.pos[1] > 195:
-                print(event.pos)
                 return  # продолжить
-            elif (event.type == pygame.KEYDOWN or
-                  event.type == pygame.MOUSEBUTTONDOWN) and \
+            elif event.type == pygame.MOUSEBUTTONDOWN and \
                     410 > event.pos[0] > 390 and 205 > event.pos[1] > 175:
-                print(event.pos)
                 return  # лампа
-
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_click.play()
         pygame.display.flip()
         clock.tick(FPS)
 
