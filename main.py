@@ -37,36 +37,65 @@ def load_sound(name):
     return sound
 
 
-def load_music(name):
-    fullname = os.path.join('data', name)
-    try:
-        music = pygame.mixer.music.load(fullname)
-
-    except pygame.error as message:
-        print('Cannot load sound:', name)
-        raise SystemExit(message)
-
-    # если файл не существует, то выходим
-    if not os.path.isfile(fullname):
-        print(f"Файл со звуком '{fullname}' не найден")
-        sys.exit()
-    music = pygame.mixer.music.load(fullname)
-    return music
-
-
-FPS = 50
-
-
 def terminate():
     pygame.quit()
     sys.exit()
+
+
+pygame.init()
+FPS = 50
+size = WIDTH, HEIGHT = 700, 400
+screen = pygame.display.set_mode(size)
+sprite_group = pygame.sprite.Group()
+hero_group = pygame.sprite.Group()
+
+tile_images = {
+    'wall': load_image('brick.png'),
+    'empty': load_image('download.png')
+}
+player_image = load_image('mar.png')
+
+tile_width, tile_height = 140, 80
+
+
+class Sprite(pygame.sprite.Sprite):
+
+    def __init__(self, group):
+        super().__init__(group)
+        self.rect = None
+
+    def get_event(self, event):
+        pass
+
+
+class Player(Sprite):
+    def __init__(self, pos_x, pos_y):
+        super().__init__(hero_group)
+        self.image = player_image
+        self.rect = self.image.get_rect().move(
+            tile_width * pos_x + 5, tile_height * pos_y + 5)
+        self.pos = (pos_x, pos_y)
+
+    def move(self, x, y):
+        self.pos = (x, y)
+        self.rect = self.image.get_rect().move(tile_width * self.pos[0] + 5,
+                                               tile_height * self.pos[1] + 1)
+
+
+class Tile(Sprite):
+    def __init__(self, tile_type, pos_x, pos_y):
+        super().__init__(sprite_group)
+        self.image = tile_images[tile_type]
+        self.rect = self.image.get_rect().move(
+            tile_width * pos_x, tile_height * pos_y)
+        self.abs_pos = (self.rect.x, self.rect.y)
 
 
 def start_screen():
     intro_text = ["Главная страница",
                   "Настройки",
                   "Продолжить"]
-    size = WIDTH, HEIGHT = 700, 400
+
     screen = pygame.display.set_mode(size)
     clock = pygame.time.Clock()
     fon = pygame.transform.scale(load_image('fon.jpg'), (WIDTH, HEIGHT))
@@ -104,7 +133,68 @@ def start_screen():
         clock.tick(FPS)
 
 
-pygame.init()
+def load_level(filename):
+    filename = "data/" + filename
+    with open(filename, 'r') as mapFile:
+        level_map = [line.strip() for line in mapFile]
+    max_width = max(map(len, level_map))
+    return list(map(lambda x: list(x.ljust(max_width, '.')), level_map))
+
+
+def generate_level(level):
+    new_player, x, y = None, None, None
+    for y in range(len(level)):
+        for x in range(len(level[y])):
+            if level[y][x] == '.':
+                Tile('empty', x, y)
+            elif level[y][x] == '#':
+                Tile('wall', x, y)
+            elif level[y][x] == '@':
+                Tile('empty', x, y)
+                new_player = Player(x, y)
+                level[y][x] = "."
+    return new_player, x, y
+
+
+def move(hero, movement):
+    x, y = hero.pos
+    if movement == "up":
+        if y > 0 and level_map[y - 1][x] == ".":
+            hero.move(x, y - 1)
+    elif movement == "down":
+        if y < max_y - 1 and level_map[y + 1][x] == ".":
+            hero.move(x, y + 1)
+    elif movement == "left":
+        if x > 0 and level_map[y][x - 1] == ".":
+            hero.move(x - 1, y)
+    elif movement == "right":
+        if x < max_x - 1 and level_map[y][x + 1] == ".":
+            hero.move(x + 1, y)
+
+
+start_screen()
+level_map = load_level("map.map")
+hero, max_x, max_y = generate_level(level_map)
 pygame.mixer.music.load("data/sonata.mp3")
 pygame.mixer.music.play(loops=-1, start=6.5)
 start_screen()
+running = True
+clock = pygame.time.Clock()
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                move(hero, "up")
+            elif event.key == pygame.K_DOWN:
+                move(hero, "down")
+            elif event.key == pygame.K_LEFT:
+                move(hero, "left")
+            elif event.key == pygame.K_RIGHT:
+                move(hero, "right")
+    screen.fill(pygame.Color("black"))
+    sprite_group.draw(screen)
+    hero_group.draw(screen)
+    clock.tick(FPS)
+    pygame.display.flip()
