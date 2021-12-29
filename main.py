@@ -187,6 +187,7 @@ move_left = False
 move_down = False
 move_up = False
 g = .2
+falling = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -201,11 +202,16 @@ while running:
                 move_left = False
             elif event.key == pygame.K_RIGHT:
                 move_right = False
+    if level_map[hero.pos[1] - 1][hero.pos[0]] == '.':
+        falling = True
 
+    if falling:
+        move(hero, 'down')
     if move_right:
         move(hero, "right")
     if move_left:
         move(hero, "left")
+
     screen.fill(pygame.Color("black"))
     sprite_group.draw(screen)
     hero_group.draw(screen)
