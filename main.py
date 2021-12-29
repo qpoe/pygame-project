@@ -50,12 +50,14 @@ sprite_group = pygame.sprite.Group()
 hero_group = pygame.sprite.Group()
 
 tile_images = {
-    'wall': load_image('brick.png'),
-    'empty': load_image('download.png')
+    'wall': pygame.transform.scale(load_image('white square.jpg'), (5,
+                                                                    5)),
+    'empty': pygame.transform.scale(load_image('download.png'), (5,
+                                                                 5))
 }
 player_image = load_image('mar.png')
 
-tile_width, tile_height = 140, 80
+tile_width, tile_height = 5, 5
 
 
 class Sprite(pygame.sprite.Sprite):
@@ -73,12 +75,12 @@ class Player(Sprite):
         super().__init__(hero_group)
         self.image = player_image
         self.rect = self.image.get_rect().move(
-            tile_width * pos_x + 5, tile_height * pos_y + 5)
+            tile_width * pos_x + 10, tile_height * pos_y + 5)
         self.pos = (pos_x, pos_y)
 
     def move(self, x, y):
         self.pos = (x, y)
-        self.rect = self.image.get_rect().move(tile_width * self.pos[0] + 5,
+        self.rect = self.image.get_rect().move(tile_width * self.pos[0] + 1,
                                                tile_height * self.pos[1] + 1)
 
 
@@ -180,19 +182,30 @@ pygame.mixer.music.play(loops=-1, start=6.5)
 start_screen()
 running = True
 clock = pygame.time.Clock()
+move_right = False
+move_left = False
+move_down = False
+move_up = False
+g = .2
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
-                move(hero, "up")
-            elif event.key == pygame.K_DOWN:
-                move(hero, "down")
-            elif event.key == pygame.K_LEFT:
-                move(hero, "left")
+            if event.key == pygame.K_LEFT:
+                move_left = True
             elif event.key == pygame.K_RIGHT:
-                move(hero, "right")
+                move_right = True
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT:
+                move_left = False
+            elif event.key == pygame.K_RIGHT:
+                move_right = False
+
+    if move_right:
+        move(hero, "right")
+    if move_left:
+        move(hero, "left")
     screen.fill(pygame.Color("black"))
     sprite_group.draw(screen)
     hero_group.draw(screen)
