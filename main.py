@@ -57,12 +57,12 @@ sprite_group = pygame.sprite.Group()
 hero_group = pygame.sprite.Group()
 
 tile_images = {
-    'wall': pygame.transform.scale(load_image('break.jpg'), (35, 20)),
-    'empty': pygame.transform.scale(load_image('download.png'), (35, 20))
+    'wall': pygame.transform.scale(load_image('break.jpg'), (18, 10)),
+    'empty': pygame.transform.scale(load_image('download.png'), (18, 10))
 }
 player_image = pygame.transform.scale(load_image('gg.jpg', -1), (35, 20))
 
-tile_width, tile_height = 35, 20
+tile_width, tile_height = 18, 10
 current_level=1
 
 
@@ -186,6 +186,7 @@ def move(hero, movement):
             hero.move(x + 1, y)
 
 
+
 level_map = load_level("map.map")
 hero, max_x, max_y = generate_level(level_map)
 pygame.mixer.music.load("data/sonata.mp3")
@@ -197,6 +198,8 @@ move_right = False
 move_left = False
 move_down = False
 move_up = False
+
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -231,8 +234,4 @@ while running:
         move(hero, "up")
     if move_down:
         move(hero, "down")
-    screen.fill(pygame.Color("black"))
-    sprite_group.draw(screen)
-    hero_group.draw(screen)
-    clock.tick(FPS)
     pygame.display.flip()
