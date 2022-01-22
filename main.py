@@ -4,6 +4,7 @@ import sys
 import pygame
 import pickle
 
+
 def load_image(name, colorkey=None):
     fullname = os.path.join('data', name)
     try:
@@ -50,7 +51,47 @@ def terminate():
 
 
 pygame.init()
-FPS = 50
+FPS=50
+maps=["""WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWW          WWWW        WWWW        WW
+WWWW          WWWW        WWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW      WWWWWWWW              WW      WW
+WW      WWWWWWWW              WW      WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW  WWWWWW    WWWWWWWW                WW
+WW  WWWWWW    WWWWWWWW  R             WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW            WW      WW    WW        WW
+WW            WW      WW    WW        WW
+WW    WW          WWWW        WW      WW
+WW    WW          WWWW        WW      WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW          WW      WW      WW  WW    WW
+WW@         WW      WW      WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WW  WW  WWWW          WWWW            WW
+WW  WW  WWWW          WWWW            WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW          WW       WW         WW    WW
+WW          WW       WW         WW    WW
+WW      WW        WW        WW        WW
+WW      WW        WW        WW        WW
+WW    WW      WW        WW      WW    WW
+WW    WW      WW        WW      WW    WW
+WW        WW            WW      WW     F
+WW        WW            WW      WW     F
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"""]
 size = WIDTH, HEIGHT = 700, 400
 screen = pygame.display.set_mode(size)
 sprite_group = pygame.sprite.Group()
@@ -58,13 +99,14 @@ hero_group = pygame.sprite.Group()
 
 tile_images = {
     'wall': pygame.transform.scale(load_image('break.jpg'), (18, 10)),
-    'empty': pygame.transform.scale(load_image('download.png'), (18, 10))
+    'empty': pygame.transform.scale(load_image('download.png'), (18, 10)),
+    'door': pygame.transform.scale(load_image('door.jpg'), (18, 10)),
+    'rutile': pygame.transform.scale(load_image('rutile.jpg'), (18, 10))
 }
-player_image = pygame.transform.scale(load_image('gg.jpg', -1), (35, 20))
+player_image = pygame.transform.scale(load_image('gg.jpg', -1), (18, 10))
 
 tile_width, tile_height = 18, 10
-current_level=1
-
+current_level = 1
 
 class Sprite(pygame.sprite.Sprite):
 
@@ -83,22 +125,29 @@ class Player(Sprite):
         self.rect = self.image.get_rect().move(
             tile_width * pos_x + 5, tile_height * pos_y + 5)
         self.pos = (pos_x, pos_y)
-        self.is_paused=False
+        self.is_paused = False
 
     def move(self, x, y):
         self.pos = (x, y)
         self.rect = self.image.get_rect().move(tile_width * self.pos[0] + 5,
                                                tile_height * self.pos[1] + 1)
         pygame.time.set_timer(30, 500)
-    def switch_pause(self):
-        self.is_paused=not self.is_paused
 
+    def switch_pause(self):
+        self.is_paused = not self.is_paused
 
 
 class Tile(Sprite):
     def __init__(self, tile_type, pos_x, pos_y):
         super().__init__(sprite_group)
         self.image = tile_images[tile_type]
+        self.rect = self.image.get_rect().move(
+            tile_width * pos_x, tile_height * pos_y)
+        self.abs_pos = (self.rect.x, self.rect.y)
+class Finish(Sprite):
+    def __init__(self, pos_x, pos_y):
+        super().__init__(sprite_group)
+        self.image = tile_images['empty']
         self.rect = self.image.get_rect().move(
             tile_width * pos_x, tile_height * pos_y)
         self.abs_pos = (self.rect.x, self.rect.y)
@@ -157,17 +206,23 @@ def load_level(filename):
 
 def generate_level(level):
     new_player, x, y = None, None, None
+    finishes=[]
     for y in range(len(level)):
         for x in range(len(level[y])):
             if level[y][x] == ' ':
                 Tile('empty', x, y)
             elif level[y][x] == 'W':
                 Tile('wall', x, y)
+            elif level[y][x] == 'F':
+                finish = Finish(x, y)
+                finishes.append(finish)
             elif level[y][x] == '@':
                 Tile('empty', x, y)
-                new_player = Player(x, y)
+                # new_player = Player(x, y)
                 level[y][x] = " "
-    return new_player, x, y
+            elif level[y][x] == 'R':
+                Tile('rutile', x, y)
+    return x, y, finishes
 
 
 def move(hero, movement):
@@ -186,9 +241,9 @@ def move(hero, movement):
             hero.move(x + 1, y)
 
 
-
 level_map = load_level("map.map")
-hero, max_x, max_y = generate_level(level_map)
+max_x, max_y, finishes = generate_level(level_map)
+hero=Player(10, 20)
 pygame.mixer.music.load("data/sonata.mp3")
 pygame.mixer.music.play(loops=-1, start=6.5)
 start_screen()
@@ -200,38 +255,107 @@ move_down = False
 move_up = False
 
 
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                move_left = True
-            elif event.key == pygame.K_RIGHT:
-                move_right = True
-            elif event.key == pygame.K_DOWN:
-                move_down = True
-            elif event.key == pygame.K_UP:
-                move_up = True
-            if event.type==pygame.K_p:
-                hero.switch_pause()
-            # if event.type==pygame.K_s:
-            #     with open(f"data/save.dat", "wb")
-        elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_LEFT:
-                move_left = False
-            elif event.key == pygame.K_RIGHT:
-                move_right = False
-            elif event.key == pygame.K_DOWN:
-                move_down = False
-            elif event.key == pygame.K_UP:
-                move_up = False
-    if move_right:
-        move(hero, "right")
-    if move_left:
-        move(hero, "left")
-    if move_up:
-        move(hero, "up")
-    if move_down:
-        move(hero, "down")
-    pygame.display.flip()
+def first_level():
+    global running, move_up, move_left, move_down, move_right, current_level
+    FPS = 20
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+                # if event.type==pygame.K_s:
+                #     with open(f"data/save.dat", "wb")
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect):
+                current_level += 1
+                f = open('data/map.map', 'w')
+                f.write(maps[0])
+                f.close()
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def second_level():
+    global running, move_up, move_left, move_down, move_right, current_level
+    FPS = 20
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes = generate_level(level_map)
+
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+                # if event.type==pygame.K_s:
+                #     with open(f"data/save.dat", "wb")
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect):
+                current_level += 1
+                hero.kill()
+                pygame.display.update()
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+if current_level == 1:
+    first_level()
+second_level()
