@@ -145,7 +145,7 @@ tile_images = {
 player_image = pygame.transform.scale(load_image('gg.jpg', -1), (18, 10))
 
 tile_width, tile_height = 18, 10
-f=open('data/saves.txt', encoding='utf8')
+f = open('data/saves.txt', encoding='utf8')
 current_level = int(f.read())
 f.close()
 
@@ -319,10 +319,10 @@ move_up = False
 
 def one_third_fifth_seventh_levels():
     global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
-    if current_level!=1:
+    if current_level != 1:
         level_map = load_level("map.map")
         hero, max_x, max_y, finishes, rutile = generate_level(level_map)
-    FPS=0
+    FPS = 0
     if current_level == 1 or current_level == 5:
         FPS = 20
     elif current_level == 3:
@@ -452,8 +452,9 @@ def second_level():
         clock.tick(FPS)
         pygame.display.flip()
 
+
 def fourth_tenth_level():
-    FPS=20
+    FPS = 20
     global running, move_up, move_left, move_down, move_right, current_level
     level_map = load_level("map.map")
     hero, max_x, max_y, finishes, rutile = generate_level(level_map)
@@ -479,34 +480,34 @@ def fourth_tenth_level():
                 #     with open(f"data/save.dat", "wb")
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
-                    if current_level==4:
+                    if current_level == 4:
                         for i in range(10):
                             move(hero, 'left')
-                    elif current_level==10:
+                    elif current_level == 10:
                         for i in range(10):
                             move(hero, 'right')
                     move_left = False
                 elif event.key == pygame.K_RIGHT:
-                    if current_level==4:
+                    if current_level == 4:
                         for i in range(10):
                             move(hero, 'left')
-                    elif current_level==10:
+                    elif current_level == 10:
                         for i in range(10):
                             move(hero, 'right')
                     move_right = False
                 elif event.key == pygame.K_DOWN:
-                    if current_level==4:
+                    if current_level == 4:
                         for i in range(10):
                             move(hero, 'left')
-                    elif current_level==10:
+                    elif current_level == 10:
                         for i in range(10):
                             move(hero, 'right')
                     move_down = False
                 elif event.key == pygame.K_UP:
-                    if current_level==4:
+                    if current_level == 4:
                         for i in range(10):
                             move(hero, 'left')
-                    elif current_level==10:
+                    elif current_level == 10:
                         for i in range(10):
                             move(hero, 'right')
                     move_up = False
@@ -528,6 +529,8 @@ def fourth_tenth_level():
         hero_group.draw(screen)
         clock.tick(FPS)
         pygame.display.flip()
+
+
 def sixth_level():
     global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
     if current_level != 1:
@@ -579,6 +582,8 @@ def sixth_level():
         hero_group.draw(screen)
         clock.tick(FPS)
         pygame.display.flip()
+
+
 one_third_fifth_seventh_levels()
 second_level()
 one_third_fifth_seventh_levels()
@@ -649,6 +654,6 @@ sixth_level()
 #                 return
 #         screen.fill(pygame.Color("black"))
 #         sprite_group.draw(screen)
-#         hero_group.draw(screen)
+#          hero_group.draw(screen)
 #         clock.tick(FPS)
-#         pygame.display.flip()
+#          pygame.display.flip()
