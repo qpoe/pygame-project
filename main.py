@@ -130,7 +130,87 @@ WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW""",
   WW        WW            WW      WW     F
   WW        WW            WW      WW     F
   WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"""]
+  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW""",
+        """WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWW          WWWW        WWWW        WW
+WWWW          WWWW        WWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW      WWWWWWWW              WW      WW
+WW      WWWWWWWW              WW      WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW  WWWWWW    WWWWWWWW                WW
+WW  WWWWWW    WWWWWWWW                WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW            WW      WW    WW        WW
+WW            WW      WW    WW        WW
+WW    WW          WWWW        WW      WW
+WW    WW          WWWW        WW      WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW@         WW      WW      WW  WW    WW
+WW          WW      WW      WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WW  WW  WWWW          WWWW            WW
+WW  WW  WWWW          WWWW            WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW          WW       WW         WW    WW
+WW          WW       WW         WW    WW
+WW      WW        WW        WW        WW
+WW      WW        WW        WW        WW
+WW    WW      WW        WW      WW    WW
+WW    WW      WW        WW      WW    WW
+WW        WW            WW      WW      
+WW        WW            WW      WW      
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW""",
+        """WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWW          WWWW        WWWW        WW
+WWWW          WWWW        WWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW      WWWWWWWW              WW      WW
+WW      WWWWWWWW              WW      WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW  WWWWWW    WWWWWWWW                WW
+WW  WWWWWW    WWWWWWWW                WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW            WW      WW    WW        WW
+WW            WW      WW    WW        WW
+WW    WW          WWWW        WW      WW
+WW    WW          WWWW        WW      WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW          WW      WW      WW  WW    WW
+WW@         WW      WW      WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WW  WW  WWWW          WWWW            WW
+WW  WW  WWWW          WWWW            WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW          WW       WW         WW    WW
+WW          WW       WW         WW    WW
+WW      WW        WW        WW        WW
+WW      WW        WW        WW        WW
+WW    WW      WW        WW      WW    WW
+WW    WW      WW        WW      WW    WW
+WW        WW            WW      WW     F
+WW        WW        L   WW      WW     F
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"""]
 size = WIDTH, HEIGHT = 700, 400
 screen = pygame.display.set_mode(size)
 sprite_group = pygame.sprite.Group()
@@ -139,8 +219,8 @@ hero_group = pygame.sprite.Group()
 tile_images = {
     'wall': pygame.transform.scale(load_image('break.jpg'), (18, 10)),
     'empty': pygame.transform.scale(load_image('download.png'), (18, 10)),
-    'door': pygame.transform.scale(load_image('door.jpg'), (18, 10)),
-    'rutile': pygame.transform.scale(load_image('rutile.jpg'), (18, 10))
+    'rutile': pygame.transform.scale(load_image('rutile.jpg'), (18, 10)),
+    'lamp': pygame.transform.scale(load_image('lamp.jpg'), (18, 10))
 }
 player_image = pygame.transform.scale(load_image('gg.jpg', -1), (18, 10))
 
@@ -206,7 +286,11 @@ class Rutile(Sprite):
         self.abs_pos = (self.rect.x, self.rect.y)
 
 
+lamp = False
+
+
 def start_screen():
+    global lamp
     intro_text = ["Главная страница",
                   "Настройки",
                   "Продолжить"]
@@ -241,7 +325,10 @@ def start_screen():
                 return  # продолжить
             elif event.type == pygame.MOUSEBUTTONDOWN and \
                     410 > event.pos[0] > 390 and 205 > event.pos[1] > 175:
-                return  # лампа
+                if current_level == 16:
+                    lamp = True
+                    return
+
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_click.play()
         pygame.display.flip()
@@ -257,7 +344,7 @@ def load_level(filename):
 
 
 def generate_level(level, a=None, b=None):
-    new_player, x, y, rutile = None, None, None, None
+    new_player, x, y, rutile, lampochka = None, None, None, None, None
     finishes = []
     for y in range(len(level)):
         for x in range(len(level[y])):
@@ -276,10 +363,11 @@ def generate_level(level, a=None, b=None):
                 else:
                     Tile('empty', x, y)
                     new_player = Player(x, y)
-                level[y][x] = " "
             elif level[y][x] == 'R':
                 rutile = Rutile(x, y)
-    return new_player, x, y, finishes, rutile
+            elif level[y][x] == 'L':
+                lampochka = Tile('lamp', x, y)
+    return new_player, x, y, finishes, rutile, lampochka
 
 
 def move(hero, movement):
@@ -305,7 +393,7 @@ def map_change(indx):
 
 
 level_map = load_level("map.map")
-hero, max_x, max_y, finishes, rutile = generate_level(level_map)
+hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
 pygame.mixer.music.load("data/sonata.mp3")
 pygame.mixer.music.play(loops=-1, start=6.5)
 start_screen()
@@ -317,13 +405,13 @@ move_down = False
 move_up = False
 
 
-def one_third_fifth_seventh_levels():
+def one_third_fifth_seventh_nineteenth_levels():
     global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
     if current_level != 1:
         level_map = load_level("map.map")
-        hero, max_x, max_y, finishes, rutile = generate_level(level_map)
+        hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
     FPS = 0
-    if current_level == 1 or current_level == 5:
+    if current_level == 1 or current_level == 5 or current_level == 19:
         FPS = 20
     elif current_level == 3:
         FPS = 5
@@ -347,8 +435,6 @@ def one_third_fifth_seventh_levels():
                     move_up = True
                 if event.type == pygame.K_p:
                     hero.switch_pause()
-                # if event.type==pygame.K_s:
-                #     with open(f"data/save.dat", "wb")
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     move_left = False
@@ -358,7 +444,9 @@ def one_third_fifth_seventh_levels():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
-        if current_level == 1 or current_level == 3 or current_level == 7:
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
+        if current_level == 1 or current_level == 3 or current_level == 7 or current_level == 19:
             if move_right:
                 move(hero, "right")
             if move_left:
@@ -376,12 +464,18 @@ def one_third_fifth_seventh_levels():
                 move(hero, "right")
             if move_down:
                 move(hero, "left")
+
         for finish in finishes:
             if hero.rect.colliderect(finish.rect):
-                hero_group.remove(hero)
-                current_level += 1
-                map_change(0)
-                return
+                if current_level != 19:
+                    hero_group.remove(hero)
+                    if current_level == 1:
+                        map_change(0)
+                    current_level += 1
+                    return
+                else:
+                    end_screen()
+                    return
         screen.fill(pygame.Color("black"))
         sprite_group.draw(screen)
         hero_group.draw(screen)
@@ -393,7 +487,7 @@ def second_level():
     global running, move_up, move_left, move_down, move_right, current_level
     FPS = 20
     level_map = load_level("map.map")
-    hero, max_x, max_y, finishes, rutile = generate_level(level_map)
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
     r = False
 
     while running:
@@ -415,8 +509,6 @@ def second_level():
                     move_up = True
                 if event.type == pygame.K_p:
                     hero.switch_pause()
-                # if event.type==pygame.K_s:
-                #     with open(f"data/save.dat", "wb")
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     move_left = False
@@ -440,7 +532,7 @@ def second_level():
             x, y = hero.pos
             level_map = load_level("map.map")
             hero_group.remove(hero)
-            hero, max_x, max_y, finishes, rutile = generate_level(level_map, x, y)
+            hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
         for finish in finishes:
             if hero.rect.colliderect(finish.rect) and r:
                 hero_group.remove(hero)
@@ -457,7 +549,7 @@ def fourth_tenth_level():
     FPS = 20
     global running, move_up, move_left, move_down, move_right, current_level
     level_map = load_level("map.map")
-    hero, max_x, max_y, finishes, rutile = generate_level(level_map)
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -476,8 +568,6 @@ def fourth_tenth_level():
                     move_up = True
                 if event.type == pygame.K_p:
                     hero.switch_pause()
-                # if event.type==pygame.K_s:
-                #     with open(f"data/save.dat", "wb")
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     if current_level == 4:
@@ -535,7 +625,7 @@ def sixth_level():
     global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
     if current_level != 1:
         level_map = load_level("map.map")
-        hero, max_x, max_y, finishes, rutile = generate_level(level_map)
+        hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -584,76 +674,574 @@ def sixth_level():
         pygame.display.flip()
 
 
-one_third_fifth_seventh_levels()
-second_level()
-one_third_fifth_seventh_levels()
-fourth_tenth_level()
-one_third_fifth_seventh_levels()
-sixth_level()
-# def eleventh_level():
-#     global  tile_images
-#     tile_images = {
-#         'wall': pygame.transform.scale(load_image('break_black.jpg'), (18, 10)),
-#         'empty': pygame.transform.scale(load_image('download.png'), (18, 10))
-#     }
-#     global running, move_up, move_left, move_down, move_right, current_level
-#     FPS = 20
-#     level_map = load_level("map.map")
-#     hero, max_x, max_y, finishes, rutile = generate_level(level_map)
-#     r = False
-#
-#     while running:
-#
-#         for event in pygame.event.get():
-#             if event.type == pygame.QUIT:
-#                 f = open('data/saves.txt', 'w')
-#                 f.write(str(current_level))
-#                 f.close()
-#                 running = False
-#             elif event.type == pygame.KEYDOWN:
-#                 if event.key == pygame.K_LEFT:
-#                     move_left = True
-#                 elif event.key == pygame.K_RIGHT:
-#                     move_right = True
-#                 elif event.key == pygame.K_DOWN:
-#                     move_down = True
-#                 elif event.key == pygame.K_UP:
-#                     move_up = True
-#                 if event.type == pygame.K_p:
-#                     hero.switch_pause()
-#                 # if event.type==pygame.K_s:
-#                 #     with open(f"data/save.dat", "wb")
-#             elif event.type == pygame.KEYUP:
-#                 if event.key == pygame.K_LEFT:
-#                     move_left = False
-#                 elif event.key == pygame.K_RIGHT:
-#                     move_right = False
-#                 elif event.key == pygame.K_DOWN:
-#                     move_down = False
-#                 elif event.key == pygame.K_UP:
-#                     move_up = False
-#         if move_right:
-#             move(hero, "right")
-#         if move_left:
-#             move(hero, "left")
-#         if move_up:
-#             move(hero, "up")
-#         if move_down:
-#             move(hero, "down")
-#         if rutile and hero.rect.colliderect(rutile.rect):
-#             r = True
-#             map_change(1)
-#             x, y = hero.pos
-#             level_map = load_level("map.map")
-#             hero_group.remove(hero)
-#             hero, max_x, max_y, finishes, rutile = generate_level(level_map, x, y)
-#         for finish in finishes:
-#             if hero.rect.colliderect(finish.rect) and r:
-#                 hero_group.remove(hero)
-#                 current_level += 1
-#                 return
-#         screen.fill(pygame.Color("black"))
-#         sprite_group.draw(screen)
-#          hero_group.draw(screen)
-#         clock.tick(FPS)
-#          pygame.display.flip()
+def eighteenth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    FPS = 20
+    minimized = False
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+            elif event.type == pygame.WINDOWMINIMIZED:
+                minimized = True
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect) and minimized:
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def seventeenth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    FPS = 20
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                hero_group.remove(hero)
+                current_level += 1
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def sixteenth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    if current_level != 1:
+        level_map = load_level("map.map")
+        hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    FPS = 20
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect) and lamp:
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def fourteenth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    FPS = 20
+    menu_count = 0
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    menu_count += 1
+                    start_screen()
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect) and menu_count == 3:
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def eighth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    FPS = 20
+    x = False
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        if hero.rect.colliderect(lampochka.rect):
+            x = True
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect) and x:
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def end_screen():
+    screen = pygame.display.set_mode(size)
+    clock = pygame.time.Clock()
+    font = pygame.font.Font(None, 30)
+    text_coord = 125
+    intro_rect_x = [250, 100]
+
+    if current_level == 20:
+        text = ["Happy End",
+                f"Пройденные уровни {current_level}/19. Девушка смогла очнуться."]
+        screen.fill(pygame.Color('white'))
+        for line in range(len(text)):
+            string_rendered = font.render(text[line], 1, pygame.Color('black'))
+            intro_rect = string_rendered.get_rect()
+            text_coord += 10
+            intro_rect.top = text_coord
+            intro_rect.x = intro_rect_x[line]
+            text_coord += intro_rect.height
+            screen.blit(string_rendered, intro_rect)
+    else:
+        text = ["Bad End",
+                f"Пройденные уровни {current_level}/19. Девушка еще в воспоминаниях."]
+        screen.fill(pygame.Color('black'))
+        for line in range(len(text)):
+            string_rendered = font.render(text[line], 1, pygame.Color('white'))
+            intro_rect = string_rendered.get_rect()
+            text_coord += 10
+            intro_rect.top = text_coord
+            intro_rect.x = intro_rect_x[line]
+            text_coord += intro_rect.height
+            screen.blit(string_rendered, intro_rect)
+
+    while True:
+        mouse_click = load_sound("mouse_click.mp3")
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                terminate()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_click.play()
+        pygame.display.flip()
+        clock.tick(FPS)
+
+
+def eleventh_level():
+    global tile_images
+    tile_images = {
+        'wall': pygame.transform.scale(load_image('break_black.jpg'), (18, 10)),
+        'empty': pygame.transform.scale(load_image('download.png'), (18, 10)),
+        'rutile': pygame.transform.scale(load_image('rutile.jpg'), (18, 10)),
+        'lamp': pygame.transform.scale(load_image('lamp.jpg'), (18, 10))
+    }
+    global running, move_up, move_left, move_down, move_right, current_level
+    FPS = 20
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+
+    while running:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+                # if event.type==pygame.K_s:
+                #     with open(f"data/save.dat", "wb")
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect):
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def twelfth_level():
+    global player_image
+    player_image = pygame.transform.scale(load_image('break_black.jpg', -1), (18, 10))
+    global running, move_up, move_left, move_down, move_right, current_level
+    FPS = 20
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+
+    while running:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect):
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def thirteenth_level():
+    global player_image, tile_images
+    tile_images = {
+        'wall': pygame.transform.scale(load_image('break_black.jpg'), (18, 10)),
+        'empty': pygame.transform.scale(load_image('download.png'), (18, 10)),
+        'rutile': pygame.transform.scale(load_image('rutile.jpg'), (18, 10)),
+        'lamp': pygame.transform.scale(load_image('lamp.jpg'), (18, 10))
+    }
+    player_image = pygame.transform.scale(load_image('break_black.jpg', -1), (18, 10))
+    global running, move_up, move_left, move_down, move_right, current_level
+    FPS = 20
+    level_map = load_level("map.map")
+    hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+
+    while running:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    move_left = True
+                elif event.key == pygame.K_RIGHT:
+                    move_right = True
+                elif event.key == pygame.K_DOWN:
+                    move_down = True
+                elif event.key == pygame.K_UP:
+                    move_up = True
+                if event.type == pygame.K_p:
+                    hero.switch_pause()
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT:
+                    move_left = False
+                elif event.key == pygame.K_RIGHT:
+                    move_right = False
+                elif event.key == pygame.K_DOWN:
+                    move_down = False
+                elif event.key == pygame.K_UP:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect):
+                hero_group.remove(hero)
+                current_level += 1
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def ninth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    if current_level != 1:
+        level_map = load_level("map.map")
+        hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_i:
+                    move_left = True
+                elif event.key == pygame.K_f:
+                    move_right = True
+                elif event.key == pygame.K_v:
+                    move_down = True
+                elif event.key == pygame.K_m:
+                    move_up = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_i:
+                    move_left = False
+                elif event.key == pygame.K_f:
+                    move_right = False
+                elif event.key == pygame.K_v:
+                    move_down = False
+                elif event.key == pygame.K_m:
+                    move_up = False
+        if move_right:
+            move(hero, "right")
+        if move_left:
+            move(hero, "left")
+        if move_up:
+            move(hero, "up")
+        if move_down:
+            move(hero, "down")
+        for finish in finishes:
+            if hero.rect.colliderect(finish.rect):
+                hero_group.remove(hero)
+                current_level += 1
+                map_change(0)
+                return
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
+
+
+def fifteenth_level():
+    global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    if current_level != 1:
+        level_map = load_level("map.map")
+        hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                f = open('data/saves.txt', 'w')
+                f.write(str(current_level))
+                f.close()
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    hero_group.remove(hero)
+                    current_level += 1
+                    return
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
+        screen.fill(pygame.Color("black"))
+        sprite_group.draw(screen)
+        hero_group.draw(screen)
+        clock.tick(FPS)
+        pygame.display.flip()
