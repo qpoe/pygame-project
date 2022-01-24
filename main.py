@@ -1,4 +1,5 @@
 import os
+import sqlite3
 import sys
 
 import pygame
@@ -407,6 +408,23 @@ move_up = False
 
 def one_third_fifth_seventh_nineteenth_levels():
     global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
+    with sqlite3.connect('data/levels.sqlite') as con:
+        cur = con.cursor()
+        level_text = cur.execute("""SELECT level_id, level_text from level_text
+        WHERE level_id = ?""", str(current_level))
+    text = []
+    for i, j in level_text:
+        text.append(f"{i}. {j}")
+    font = pygame.font.Font(None, 30)
+    text_coord = 50
+    intro_rect_x = [65, 100, 90]
+    for i in range(len(text)):
+        string_rendered = font.render(text[i], 1, pygame.Color('white'))
+        rrect = string_rendered.get_rect()
+        text_coord += 10
+        rrect.top = text_coord
+        rrect.x = intro_rect_x[i]
+        screen.blit(string_rendered, rrect)
     if current_level != 1:
         level_map = load_level("map.map")
         hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
@@ -433,8 +451,6 @@ def one_third_fifth_seventh_nineteenth_levels():
                     move_down = True
                 elif event.key == pygame.K_UP:
                     move_up = True
-                if event.type == pygame.K_p:
-                    hero.switch_pause()
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     move_left = False
@@ -471,7 +487,10 @@ def one_third_fifth_seventh_nineteenth_levels():
                     hero_group.remove(hero)
                     if current_level == 1:
                         map_change(0)
+                    if current_level == 7:
+                        map_change(3)
                     current_level += 1
+                    print(current_level)
                     return
                 else:
                     end_screen()
@@ -491,7 +510,6 @@ def second_level():
     r = False
 
     while running:
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 f = open('data/saves.txt', 'w')
@@ -507,8 +525,6 @@ def second_level():
                     move_down = True
                 elif event.key == pygame.K_UP:
                     move_up = True
-                if event.type == pygame.K_p:
-                    hero.switch_pause()
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     move_left = False
@@ -518,6 +534,8 @@ def second_level():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -601,6 +619,8 @@ def fourth_tenth_level():
                         for i in range(10):
                             move(hero, 'right')
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -642,8 +662,6 @@ def sixth_level():
                     move_down = True
                 elif event.key == pygame.K_w:
                     move_up = True
-                if event.type == pygame.K_p:
-                    hero.switch_pause()
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_a:
                     move_left = False
@@ -653,6 +671,8 @@ def sixth_level():
                     move_down = False
                 elif event.key == pygame.K_w:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -665,7 +685,6 @@ def sixth_level():
             if hero.rect.colliderect(finish.rect):
                 hero_group.remove(hero)
                 current_level += 1
-                map_change(0)
                 return
         screen.fill(pygame.Color("black"))
         sprite_group.draw(screen)
@@ -707,6 +726,8 @@ def eighteenth_level():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
             elif event.type == pygame.WINDOWMINIMIZED:
                 minimized = True
         if move_right:
@@ -739,6 +760,7 @@ def seventeenth_level():
             if event.type == pygame.QUIT:
                 hero_group.remove(hero)
                 current_level += 1
+                map_change(1)
                 f = open('data/saves.txt', 'w')
                 f.write(str(current_level))
                 f.close()
@@ -763,6 +785,8 @@ def seventeenth_level():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -825,6 +849,7 @@ def sixteenth_level():
             if hero.rect.colliderect(finish.rect) and lamp:
                 hero_group.remove(hero)
                 current_level += 1
+                map_change(2)
                 return
         screen.fill(pygame.Color("black"))
         sprite_group.draw(screen)
@@ -938,6 +963,7 @@ def eighth_level():
             if hero.rect.colliderect(finish.rect) and x:
                 hero_group.remove(hero)
                 current_level += 1
+                map_change(1)
                 return
         screen.fill(pygame.Color("black"))
         sprite_group.draw(screen)
@@ -1019,10 +1045,6 @@ def eleventh_level():
                     move_down = True
                 elif event.key == pygame.K_UP:
                     move_up = True
-                if event.type == pygame.K_p:
-                    hero.switch_pause()
-                # if event.type==pygame.K_s:
-                #     with open(f"data/save.dat", "wb")
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT:
                     move_left = False
@@ -1032,6 +1054,8 @@ def eleventh_level():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -1054,14 +1078,13 @@ def eleventh_level():
 
 def twelfth_level():
     global player_image
-    player_image = pygame.transform.scale(load_image('break_black.jpg', -1), (18, 10))
+    player_image = pygame.transform.scale(load_image('break_black.jpg'), (18, 10))
     global running, move_up, move_left, move_down, move_right, current_level
     FPS = 20
     level_map = load_level("map.map")
     hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
 
     while running:
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 f = open('data/saves.txt', 'w')
@@ -1088,6 +1111,8 @@ def twelfth_level():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -1150,6 +1175,8 @@ def thirteenth_level():
                     move_down = False
                 elif event.key == pygame.K_UP:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -1200,6 +1227,8 @@ def ninth_level():
                     move_down = False
                 elif event.key == pygame.K_m:
                     move_up = False
+                elif event.key == pygame.K_ESCAPE:
+                    start_screen()
         if move_right:
             move(hero, "right")
         if move_left:
@@ -1245,3 +1274,44 @@ def fifteenth_level():
         hero_group.draw(screen)
         clock.tick(FPS)
         pygame.display.flip()
+
+
+if current_level == 1:
+    one_third_fifth_seventh_nineteenth_levels()
+if current_level == 2:
+    second_level()
+if current_level == 3:
+    one_third_fifth_seventh_nineteenth_levels()
+if current_level == 4:
+    fourth_tenth_level()
+if current_level == 5:
+    one_third_fifth_seventh_nineteenth_levels()
+if current_level == 6:
+    sixth_level()
+if current_level == 7:
+    one_third_fifth_seventh_nineteenth_levels()
+if current_level == 8:
+    eighth_level()
+if current_level == 9:
+    ninth_level()
+if current_level == 10:
+    fourth_tenth_level()
+if current_level == 11:
+    eleventh_level()
+if current_level == 12:
+    twelfth_level()
+if current_level == 13:
+    thirteenth_level()
+if current_level == 14:
+    fourteenth_level()
+if current_level == 15:
+    fifteenth_level()
+if current_level == 16:
+    sixteenth_level()
+if current_level == 17:
+    seventeenth_level()
+if current_level == 18:
+    eighteenth_level()
+if current_level == 19:
+    one_third_fifth_seventh_nineteenth_levels()
+end_screen()
