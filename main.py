@@ -93,45 +93,45 @@ WW        WW            WW      WW     F
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW""",
         """WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-  WWWW          WWWW        WWWW        WW
-  WWWW          WWWW        WWWW        WW
-  WW    WWWW          WWWWWWWWWW        WW
-  WW    WWWW          WWWWWWWWWW        WW
-  WW      WWWWWWWW              WW      WW
-  WW      WWWWWWWW              WW      WW
-  WW      WW    WWWWWWWW    WWWWWWWW    WW
-  WW      WW    WWWWWWWW    WWWWWWWW    WW
-  WW  WWWWWW    WWWWWWWW                WW
-  WW  WWWWWW    WWWWWWWW                WW
-  WW      WW          WW  WW    WWWW    WW
-  WW      WW          WW  WW    WWWW    WW
-  WW      WW  WWWW    WW      WWWW    WWWW
-  WW      WW  WWWW    WW      WWWW    WWWW
-  WW            WW      WW    WW        WW
-  WW            WW      WW    WW        WW
-  WW    WW          WWWW        WW      WW
-  WW    WW          WWWW        WW      WW
-  WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
-  WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
-  WW          WW      WW      WW  WW    WW
-  WW@         WW      WW      WW  WW    WW
-  WWWWWW      WW        WW    WW  WW    WW
-  WWWWWW      WW        WW    WW  WW    WW
-  WW  WW  WWWW          WWWW            WW
-  WW  WW  WWWW          WWWW            WW
-  WW  WW    WW  WWWWWWWW      WWWWWW    WW
-  WW  WW    WW  WWWWWWWW      WWWWWW    WW
-  WW          WW       WW         WW    WW
-  WW          WW       WW         WW    WW
-  WW      WW        WW        WW        WW
-  WW      WW        WW        WW        WW
-  WW    WW      WW        WW      WW    WW
-  WW    WW      WW        WW      WW    WW
-  WW        WW            WW      WW     F
-  WW        WW            WW      WW     F
-  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-  WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW""",
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWW          WWWW        WWWW        WW
+WWWW          WWWW        WWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW    WWWW          WWWWWWWWWW        WW
+WW      WWWWWWWW              WW      WW
+WW      WWWWWWWW              WW      WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW      WW    WWWWWWWW    WWWWWWWW    WW
+WW  WWWWWW    WWWWWWWW                WW
+WW  WWWWWW    WWWWWWWW                WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW          WW  WW    WWWW    WW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW      WW  WWWW    WW      WWWW    WWWW
+WW            WW      WW    WW        WW
+WW            WW      WW    WW        WW
+WW    WW          WWWW        WW      WW
+WW    WW          WWWW        WW      WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW    WW  WWWWWW  WWWWWW  WW  WW  WW  WW
+WW          WW      WW      WW  WW    WW
+WW@         WW      WW      WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WWWWWW      WW        WW    WW  WW    WW
+WW  WW  WWWW          WWWW            WW
+WW  WW  WWWW          WWWW            WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW  WW    WW  WWWWWWWW      WWWWWW    WW
+WW          WW       WW         WW    WW
+WW          WW       WW         WW    WW
+WW      WW        WW        WW        WW
+WW      WW        WW        WW        WW
+WW    WW      WW        WW      WW    WW
+WW    WW      WW        WW      WW    WW
+WW        WW            WW      WW     F
+WW        WW            WW      WW     F
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW""",
         """WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 WWWW          WWWW        WWWW        WW
@@ -408,23 +408,6 @@ move_up = False
 
 def one_third_fifth_seventh_nineteenth_levels():
     global running, move_up, move_left, move_down, move_right, current_level, finishes, hero
-    with sqlite3.connect('data/levels.sqlite') as con:
-        cur = con.cursor()
-        level_text = cur.execute("""SELECT level_id, level_text from level_text
-        WHERE level_id = ?""", str(current_level))
-    text = []
-    for i, j in level_text:
-        text.append(f"{i}. {j}")
-    font = pygame.font.Font(None, 30)
-    text_coord = 50
-    intro_rect_x = [65, 100, 90]
-    for i in range(len(text)):
-        string_rendered = font.render(text[i], 1, pygame.Color('white'))
-        rrect = string_rendered.get_rect()
-        text_coord += 10
-        rrect.top = text_coord
-        rrect.x = intro_rect_x[i]
-        screen.blit(string_rendered, rrect)
     if current_level != 1:
         level_map = load_level("map.map")
         hero, max_x, max_y, finishes, rutile, lampochka = generate_level(level_map)
