@@ -292,7 +292,7 @@ lamp = False
 def start_screen():
     global lamp
     intro_text = ["Главная страница",
-                  "Настройки",
+                  " ",
                   "Продолжить"]
 
     screen = pygame.display.set_mode(size)
@@ -317,9 +317,6 @@ def start_screen():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 terminate()
-            elif event.type == pygame.MOUSEBUTTONDOWN and \
-                    210 > event.pos[0] > 100 and 185 > event.pos[1] > 165:
-                return  # натройки
             elif event.type == pygame.MOUSEBUTTONDOWN and \
                     215 > event.pos[0] > 90 and 215 > event.pos[1] > 195:
                 return  # продолжить
@@ -961,7 +958,7 @@ def end_screen():
     text_coord = 125
     intro_rect_x = [250, 100]
 
-    if current_level == 20:
+    if current_level == 19:
         text = ["Happy End",
                 f"Пройденные уровни {current_level}/19. Девушка смогла очнуться."]
         screen.fill(pygame.Color('white'))
@@ -973,9 +970,21 @@ def end_screen():
             intro_rect.x = intro_rect_x[line]
             text_coord += intro_rect.height
             screen.blit(string_rendered, intro_rect)
-    else:
+    elif current_level < 19:
         text = ["Bad End",
                 f"Пройденные уровни {current_level}/19. Девушка еще в воспоминаниях."]
+        screen.fill(pygame.Color('black'))
+        for line in range(len(text)):
+            string_rendered = font.render(text[line], 1, pygame.Color('white'))
+            intro_rect = string_rendered.get_rect()
+            text_coord += 10
+            intro_rect.top = text_coord
+            intro_rect.x = intro_rect_x[line]
+            text_coord += intro_rect.height
+            screen.blit(string_rendered, intro_rect)
+    else:
+        text = ["Bad End",
+                f"Почему? Это не должно быть так."]
         screen.fill(pygame.Color('black'))
         for line in range(len(text)):
             string_rendered = font.render(text[line], 1, pygame.Color('white'))
