@@ -499,16 +499,16 @@ def one_third_fifth_seventh_nineteenth_levels():
                     if current_level == 7:
                         map_change(3)
                     current_level += 1
-                    print(current_level)
                     return
                 else:
                     end_screen()
+                    f = open('data/saves.txt', encoding='utf8')
+                    f.write(str(int(f.read())+1))
+                    f.close()
                     return
         screen.fill(pygame.Color("black"))
         sprite_group.draw(screen)
         hero_group.draw(screen)
-        # game_font = pygame.freetype.Font('Neucha Regular.ttf', 56)
-        # game_font.render_to(screen, (0, 0), "Я Попала в ванную!!!!", (250, 0, 0))
         clock.tick(FPS)
         pygame.display.flip()
 
@@ -1011,6 +1011,9 @@ def end_screen():
             intro_rect.x = intro_rect_x[line]
             text_coord += intro_rect.height
             screen.blit(string_rendered, intro_rect)
+        f = open('data/saves.txt', mode='w')
+        f.write('20')
+        f.close()
     elif current_level < 19:
         text = ["Bad End",
                 f"Пройденные уровни {current_level}/19. Девушка еще в воспоминаниях."]
@@ -1024,17 +1027,9 @@ def end_screen():
             text_coord += intro_rect.height
             screen.blit(string_rendered, intro_rect)
     else:
-        text = ["Bad End",
-                f"Почему? Это не должно быть так."]
-        screen.fill(pygame.Color('black'))
-        for line in range(len(text)):
-            string_rendered = font.render(text[line], 1, pygame.Color('white'))
-            intro_rect = string_rendered.get_rect()
-            text_coord += 10
-            intro_rect.top = text_coord
-            intro_rect.x = intro_rect_x[line]
-            text_coord += intro_rect.height
-            screen.blit(string_rendered, intro_rect)
+
+        fon = pygame.transform.scale(load_image('end.jpg'), (WIDTH, HEIGHT))
+        screen.blit(fon, (0, 0))
 
     while True:
         mouse_click = load_sound("mouse_click.mp3")
@@ -1490,7 +1485,323 @@ def sixth():
         clock.tick(FPS)
         pygame.display.flip()
 
+def seventh():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (150, 350), "Падпараджа: Рутил, мы опаздываем!", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (200, 350), "Рутил: Щас, уже бегу!", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (250, 175), "Седьмой уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
 
+def eighth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (150, 350), "Падпараджа: Рутил... Куда делся свет...", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (150, 350), "Рутил: Наверное лампочка перегорела", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (250, 175), "Восьмой уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def nineth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (200, 350), "Падпараджа: Скрипка", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (250, 350), "Рутил: Violin", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (150, 350), "Падпараджа: Медиатор", (225, 225, 225))
+        elif text == 4:
+            game_font.render_to(screen, (200, 350), "Рутил: Mediator", (225, 225, 225))
+        elif text == 5:
+            game_font.render_to(screen, (200, 350), "Падпараджа: Флейта", (225, 225, 225))
+        elif text == 6:
+            game_font.render_to(screen, (250, 350), "Рутил: Flute", (225, 225, 225))
+        elif text == 7:
+            game_font.render_to(screen, (200, 350), "Падпараджа: Ирландский ульеанн", (225, 225, 225))
+        elif text == 8:
+            game_font.render_to(screen, (250, 350), "Рутил: Irish uilleann", (225, 225, 225))
+        elif text == 9:
+            game_font.render_to(screen, (250, 175), "Дявятый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def tenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (130, 320), "Падпараджа: Рутил, мы почти выйграли,", (225, 225, 225))
+            game_font.render_to(screen, (200, 360), "подножми еще чучуть",(225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (70, 350), "Рутил: Не могу, канат выскальзывае у меня из рук!", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (70, 350), "*Вдруг Рутил резко потянули вперед и она упала*", (225, 225, 225))
+        elif text == 4:
+            game_font.render_to(screen, (250, 175), "Десятый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def eleventh():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (250, 350), "Падпараджа: Идем!", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (150, 320), "*Рутил схватила Падпараджу за руку и", (225, 225, 225))
+            game_font.render_to(screen, (170, 360), " они побежали по темной улице*", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (250, 175), "Одинадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def tvelth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (100, 350), "Рутил: Уже так темно, я даже есебя не вижу!", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (250, 175), "Двенадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def thirteenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (200, 310), "*На улице стало совсем темно,", (225, 225, 225))
+            game_font.render_to(screen, (130, 340), "что девочки уже вообще ничего не видели:", (225, 225, 225))
+            game_font.render_to(screen, (250, 370), "ни дорогу, ни себя", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (250, 175), "Тринадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def forteenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (150, 350), "*Тук тук тук*", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (250, 175), "Четырнадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def fifteenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (130, 350), "Падпараджа: Ладно, мне пора бежать, пока!", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (100, 350), "Рутил: Стой! Мы ведь еще не закончили диалог!", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (250, 175), "Пятнадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def sixteenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (50, 350), "Рутил: Зачем мы забрели в этот дом с привидениями?", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (130, 350), "*Рутил от страха обняла Падпараджу*", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (100, 350), "Падпараджа: Привидений нет, чего ты боишься?", (225, 225, 225))
+        elif text == 4:
+            game_font.render_to(screen, (100, 320), "*Девочкам под ноги выкатилась керасиновая", (225, 225, 225))
+            game_font.render_to(screen, (200, 360), " лампа с лестницы второго этажа*", (225, 225, 225))
+        elif text == 5:
+            game_font.render_to(screen, (250, 175), "Пятнадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def seventeenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (250, 100), "Примечание автора:", (225, 225, 225))
+            game_font.render_to(screen, (0, 140), "Число 17 - несчатное число, так как на Итальянском означает", (225, 225, 225))
+            game_font.render_to(screen, (70, 180), "'я жил' и так часто пишут на могилах в Риме", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def eigthteenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (150, 350), "Рутил: Что мне делать с этим свитком?", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (100, 350), "Падпараджа: А ты не пробовала его свернуть?", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (230, 350), "Рутил: Хорошоя идея", (225, 225, 225))
+        elif text == 4:
+            game_font.render_to(screen, (250, 175), "Восемнадцатый уровень", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
+
+def nineteenth():
+    global running
+    text = 1
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    text += 1
+        screen.fill(pygame.Color("black"))
+        game_font = pygame.freetype.Font('Neucha Regular.ttf', 30)
+        if text == 1:
+            game_font.render_to(screen, (100, 350), "Падпараджа: Прошло уже 3 месяца с той аварии", (225, 225, 225))
+        elif text == 2:
+            game_font.render_to(screen, (50, 350), "Падпараджа: Через 2 недели я собираюс выходить замуж", (225, 225, 225))
+        elif text == 3:
+            game_font.render_to(screen, (100, 350), "Падпараджа: Я надеюсь, что ты проснешься", (225, 225, 225))
+        elif text == 4:
+            game_font.render_to(screen, (250, 175), "Не конец", (225, 225, 225))
+        else:
+            return
+        clock.tick(FPS)
+        pygame.display.flip()
 # активация уровней
 if current_level == 1:
     first()
@@ -1511,29 +1822,42 @@ if current_level == 6:
     sixth()
     sixth_level()
 if current_level == 7:
+    seventh()
     one_third_fifth_seventh_nineteenth_levels()
 if current_level == 8:
+    eighth()
     eighth_level()
 if current_level == 9:
+    nineth()
     ninth_level()
 if current_level == 10:
+    tenth()
     fourth_tenth_level()
 if current_level == 11:
+    eleventh()
     eleventh_level()
 if current_level == 12:
+    tvelth()
     twelfth_level()
 if current_level == 13:
+    thirteenth()
     thirteenth_level()
 if current_level == 14:
+    forteenth()
     fourteenth_level()
 if current_level == 15:
+    fifteenth()
     fifteenth_level()
 if current_level == 16:
+    sixteenth()
     sixteenth_level()
 if current_level == 17:
+    seventeenth()
     seventeenth_level()
 if current_level == 18:
+    eigthteenth()
     eighteenth_level()
 if current_level == 19:
+    nineteenth()
     one_third_fifth_seventh_nineteenth_levels()
 end_screen()
